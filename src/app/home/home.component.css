@@ -1,0 +1,47 @@
+*{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.userForm {
+  margin-top: 45px;
+}
+
+.fdiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+}
+
+.btns .btn {
+  margin-top: 10px;
+}
+
+.fdiv label {
+  margin-top: 15px;
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+.fdiv input {
+  outline: none;
+  width: 250px;
+}
+
+.resultdiv {
+  margin-top: 35px;
+}
+
+.resultdiv h5 {
+  margin-right: 30px;
+}
