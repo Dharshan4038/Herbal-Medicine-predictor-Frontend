@@ -3,85 +3,85 @@
         <h1>Herbal Medicine Predictor</h1>
     </div>
     <div class="userForm">
-        <form action="">
+        <form [formGroup]="herbForm" (ngSubmit)="getSymptoms()">
             <div class="cont">
                 <div class="fdiv">
-                  <label for=""> Enter your name:
-                    <input type="text" placeholder="Enter name here..." name="uname" />
-                  </label>
                   <label for="">Symptom 1:
-                    <select name="symp1" id="sym1">
+                    <select name="symp1" id="sym1" formControlName="symptom1">
                       <option value="">Choose your problem</option>
-                      <option value="1">Immunity</option>
-                      <option value="2">Weight Loss</option>
-                      <option value="3">Weight Gain</option>
+                      <ng-container *ngFor="let i of symptoms">
+                        <option value="{{i}}">{{i}}</option>
+                      </ng-container>
                     </select>
                   </label>
                   <label for="">Symptom 2:
-                    <select name="symp1" id="sym2">
+                    <select name="symp2" id="sym2" formControlName="symptom2">
                       <option value="">Choose your problem</option>
-                      <option value="1">Immunity</option>
-                      <option value="2">Weight Loss</option>
-                      <option value="3">Weight Gain</option>
+                      <ng-container *ngFor="let i of symptoms">
+                        <option value="{{i}}">{{i}}</option>
+                      </ng-container>
                     </select>
                   </label>
                   <label for="">Symptom 3:
-                    <select name="symp1" id="sym2">
+                    <select name="symp3" id="sym3" formControlName="symptom3">
                       <option value="">Choose your problem</option>
-                      <option value="1">Immunity</option>
-                      <option value="2">Weight Loss</option>
-                      <option value="3">Weight Gain</option>
+                      <ng-container *ngFor="let i of symptoms">
+                        <option value="{{i}}">{{i}}</option>
+                      </ng-container>
                     </select>
                   </label>
                   <label for="">Symptom 4:
-                    <select name="symp1" id="sym2">
+                    <select name="symp4" id="sym4" formControlName="symptom4">
                       <option value="">Choose your problem</option>
-                      <option value="1">Immunity</option>
-                      <option value="2">Weight Loss</option>
-                      <option value="3">Weight Gain</option>
+                      <ng-container *ngFor="let i of symptoms">
+                        <option value="{{i}}">{{i}}</option>
+                      </ng-container>
                     </select>
                   </label>
                   <label for="">Symptom 5:
-                    <select name="symp1" id="sym2">
+                    <select name="symp5" id="sym5" formControlName="symptom5">
                       <option value="">Choose your problem</option>
-                      <option value="1">Immunity</option>
-                      <option value="2">Weight Loss</option>
-                      <option value="3">Weight Gain</option>
+                      <ng-container *ngFor="let i of symptoms">
+                        <option value="{{i}}">{{i}}</option>
+                      </ng-container>
                     </select>
                   </label>
               </div>
               <div class="btns">
                 <button class="btn btn-success btn-lg">Predict-1</button>
-                <button class="btn btn-success btn-lg">Predict-2</button>
-                <button class="btn btn-success btn-lg">Predict-3</button>
-                <button class="btn btn-success btn-lg">Predict-4</button>
-                <button class="btn btn-danger btn-lg">Reset</button>
               </div>
             </div>
         </form>
+        <div class="reset-btn">
+          <button class="btn rbtn btn-danger btn-lg" (click)="reset()">Reset</button>
+        </div>
         <div class="resultdiv">
           <h2>SUGGESTED HERB</h2>
           <h3>Prediction-1:</h3>
           <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>Arugampul</i></h5>
-            <h5>Confidence Score: 90%</h5>
+            <h5>Herb Name: <i>{{herbs[0]}}</i></h5>
+            <h5>Confidence Score: {{acc[0]}}</h5>
           </div>
           <h3>Prediction-2:</h3>
           <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>Arugampul</i></h5>
-            <h5>Confidence Score: 90%</h5>
+            <h5>Herb Name: <i>{{herbs[1]}}</i></h5>
+            <h5>Confidence Score: {{acc[1]}}</h5>
           </div>
           <h3>Prediction-3:</h3>
           <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>Arugampul</i></h5>
-            <h5>Confidence Score: 90%</h5>
+            <h5>Herb Name: <i>{{herbs[2]}}</i></h5>
+            <h5>Confidence Score: {{acc[2]}}</h5>
           </div>
           <h3>Prediction-4:</h3>
           <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>Arugampul</i></h5>
-            <h5>Confidence Score: 90%</h5>
+            <h5>Herb Name: <i>{{herbs[3]}}</i></h5>
+            <h5>Confidence Score: {{acc[3]}}</h5>
+          </div>
+          <h3>Prediction-5:</h3>
+          <div class="d-flex col-lg-6">
+            <h5>Herb Name: <i>{{herbs[4]}}</i></h5>
+            <h5>Confidence Score: {{acc[4]}}</h5>
           </div>
         </div>
     </div>
 </div>
-

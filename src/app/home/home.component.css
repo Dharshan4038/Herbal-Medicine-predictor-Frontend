@@ -45,3 +45,13 @@
 .resultdiv h5 {
   margin-right: 30px;
 }
+
+
+.reset-btn {
+  text-align:end;
+}
+
+.rbtn {
+  width: 125px;
+  margin-right: 18px;
+}
