@@ -48,39 +48,45 @@
                   </label>
               </div>
               <div class="btns">
-                <button class="btn btn-success btn-lg">Predict-1</button>
+                <button class="btn pbtn btn-success btn-lg">Predict</button>
+                <button class="btn rbtn btn-danger btn-lg" (click)="reset()">Reset</button>
               </div>
             </div>
         </form>
-        <div class="reset-btn">
-          <button class="btn rbtn btn-danger btn-lg" (click)="reset()">Reset</button>
-        </div>
         <div class="resultdiv">
-          <h2>SUGGESTED HERB</h2>
-          <h3>Prediction-1:</h3>
-          <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>{{herbs[0]}}</i></h5>
-            <h5>Confidence Score: {{acc[0]}}</h5>
-          </div>
-          <h3>Prediction-2:</h3>
-          <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>{{herbs[1]}}</i></h5>
-            <h5>Confidence Score: {{acc[1]}}</h5>
-          </div>
-          <h3>Prediction-3:</h3>
-          <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>{{herbs[2]}}</i></h5>
-            <h5>Confidence Score: {{acc[2]}}</h5>
-          </div>
-          <h3>Prediction-4:</h3>
-          <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>{{herbs[3]}}</i></h5>
-            <h5>Confidence Score: {{acc[3]}}</h5>
-          </div>
-          <h3>Prediction-5:</h3>
-          <div class="d-flex col-lg-6">
-            <h5>Herb Name: <i>{{herbs[4]}}</i></h5>
-            <h5>Confidence Score: {{acc[4]}}</h5>
+          <h2>SUGGESTED HERBS</h2>
+          <div class="row ans">
+            <div class="col-lg-6">
+              <h3>Decision Tree:</h3>
+              <div class="d-flex col-lg-6">
+                <strong>
+                  <p>Herb Name: <i>{{herbs[0]}}</i></p>
+                </strong>
+                <!-- <h5>Confidence Score: {{acc[0]}}</h5> -->
+              </div>
+              <h3>Random Forest:</h3>
+              <div class="d-flex col-lg-6">
+               <strong><p>Herb Name: <i>{{herbs[1]}}</i></p></strong>
+                <!-- <h5>Confidence Score: {{acc[1]}}</h5> -->
+              </div>
+              <h3>KNN Classifier:</h3>
+              <div class="d-flex col-lg-6">
+                <strong><p>Herb Name: <i>{{herbs[2]}}</i></p></strong>
+                <!-- <h5>Confidence Score: {{acc[2]}}</h5> -->
+              </div>
+            </div>
+            <div class="col-lg-6">
+                <h3>Logistic Regression:</h3>
+                <div class="d-flex col-lg-6">
+                  <strong><p>Herb Name: <i>{{herbs[3]}}</i></p></strong>
+                  <!-- <h5>Confidence Score: {{acc[3]}}</h5> -->
+                </div>
+                <h3>Naive Bayes Classifier:</h3>
+                <div class="d-flex col-lg-6">
+                  <strong><p>Herb Name: <i>{{herbs[4]}}</i></p></strong>
+                  <!-- <h5>Confidence Score: {{acc[4]}}</h5> -->
+                </div>
+            </div>
           </div>
         </div>
     </div>

@@ -1,35 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Neonderthaw&family=Poppins:ital,wght@0,400;0,500;0,700;1,600&family=Roboto:ital@1&family=Ubuntu:wght@400;500;700&display=swap');
+
 *{
   margin-top: 0;
   margin-bottom: 10px;
+  font-family: 'Poppins',sans-serif;
 }
 
 .userForm {
   margin-top: 45px;
 }
 
-.fdiv {
-  display: flex;
-  flex-direction: column;
-}
 
-.cont {
-  display: flex;
-  justify-content: space-between;
-}
-
-.btns {
-  display: flex;
-  flex-direction: column;
-  margin-right: 25px;
-}
 
 .btns .btn {
   margin-top: 10px;
 }
 
 .fdiv label {
+  font-weight: 600;
   margin-top: 15px;
-  font-size: 18px;
+  font-size: 16px;
   padding-right: 15px;
 }
 
@@ -46,12 +36,36 @@
   margin-right: 30px;
 }
 
+.pbtn {
+  cursor: pointer;
+}
 
-.reset-btn {
-  text-align:end;
+.pbtn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+select {
+  cursor: pointer;
 }
 
 .rbtn {
-  width: 125px;
-  margin-right: 18px;
+  cursor: pointer;
+  background-color: red;
+  margin-left: 40px;
+  width: 100px;
+}
+
+.rbtn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.ans {
+  margin-top: 30px;
+}
+
+
+p {
+  font-size: 18px;
 }
